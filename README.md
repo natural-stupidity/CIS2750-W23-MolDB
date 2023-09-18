@@ -1,6 +1,6 @@
 # CIS 2750 W23 Molecule Project
 ### Year: 2023
-This project was made for CIS\*2750 (Software Systems Development and Integration) at the University of Guelph.
+This project was made for CIS 2750 (Software Systems Development and Integration) at the University of Guelph.
 
 The program takes uploaded .SDF files and then parses, stores, and then creates and displays an SVG image to the user. Users can then rotate, spin, or change the appearance of the molecule as much as they want.
 
