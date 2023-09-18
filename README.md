@@ -7,7 +7,7 @@ The program takes uploaded .SDF files and then parses, stores, and then creates 
 This is an updated version of the app that I worked on throughout the Summer because I was disappointed in how the original project turned out (Although it was complete to specification), and I wanted to see if I could figure out Dr. Kremer's "Nightmare Mode". This version not only has Nightmare mode added, but a ton of other features that were not present in the original.
 
 ## Technical Details:
-**Front End:** HTML, CSS, JavaScript, and jQuery<br/>
+**Front End:** HTML, CSS, Bootstrap, JavaScript, and jQuery<br/>
 **Back End:** C, Python, Swig, and SQLite
 
 Note: The swig file used (*molecule.i*) was created by Professor Kremer. You will need Swig in order to run the program.
