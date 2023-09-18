@@ -1,0 +1,568 @@
+:root {
+    --background-color: #EEE;
+    --orange-colour: #F06529;
+    --blue-colour: #659BD3;
+    --green-colour: #6DE981;
+    --purple-colour: #6C58B3;
+    /*--purple-colour: rgba(108, 88, 179, 1.00)*/
+}
+
+body {
+    position: relative;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* === General Stuff === */
+.sect-pt4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.container {
+    min-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    padding-top: 68px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.btn-custom {
+    color: #FFF;
+    background-color: var(--purple-colour);
+    border-color: var(--purple-colour);
+    font-weight: 600;
+}
+
+.btn-custom:hover {
+    color: #FFF;
+    background-color: #BA57AA;
+    border-color: #BA57AA;
+}
+
+.btn-custom:focus,
+.btn-custom.focus {
+    box-shadow: 0 0 0 0.2rem rgba(233, 109, 212, 0.5);
+}
+
+.text-outline {
+    color: #FFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+table {
+    font-size: 16px;
+    border-collapse: separate;
+    color: #000;
+}
+
+th {
+    width: 175px;
+    font-size: 18px;
+    text-align: center;
+    background-color: var(--purple-colour);
+    color: #FFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border: 1px solid black;
+
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+
+/* === Preloader ===*/
+#preloader {
+    background: #000;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #F2F2F2;
+    border-top: 6px solid var(--purple-colour);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* === Navbar === */
+.nav-item {
+    margin: 5px
+}
+
+.nav-link {
+    width: 100%;
+}
+
+/* Navbar used to have a search. Got rid of it.
+.navbar-search { width: 40% }
+@media(min-width:1200px) { .navbar-search { width: 30% } }
+
+/* Old Search bar that took up the entire length. Looked too big
+
+.navbar-search { width: 50% }
+@media(min-width:1200px) { .navbar-search { width: 60% } }
+@media(min-width:1400px) { .navbar-search { width: 65% } }
+@media(min-width:1631px) { .navbar-search { width: 70% } }
+
+*/
+
+
+/* === Notification Area === */
+#notification-area {
+    position: fixed;
+    z-index: 9998;
+    top: 140px;
+    left: 20px;
+    width: 300px;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#notification-area .notification {
+    position: relative;
+    z-index: 9999;
+    padding: 15px 10px;
+    width: 100%;
+    background: #000;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 5px 0px;
+    opacity: 0;
+    left: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+@media(min-width:576px) {
+    #notification-area {
+        top: 80px;
+    }
+}
+
+#notification-area .notification.success {
+    background: #389838;
+}
+
+#notification-area .notification.error {
+    background: red;
+}
+
+#notification-area .notification.info {
+    background: #00acee;
+}
+
+
+/* === File upload === */
+#file-upload-form {
+    width: 40%;
+}
+
+@media(max-width:1150px) {
+    #file-upload-form {
+        width: 55%;
+    }
+}
+
+@media(max-width:973px) {
+    #file-upload-form {
+        width: 70%;
+    }
+}
+
+.file-upload-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px 0px 40px 0px;
+    padding: 50px 20px;
+    border: 4px dashed var(--purple-colour);
+    transition: all 0.3s ease-in-out;
+}
+
+.file-upload-box {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-dropping,
+.file-upload-wrap:hover {
+    background-color: var(--purple-colour);
+    border: 4px dashed #FFF;
+}
+
+.file-upload-content {
+    display: none;
+    position: relative;
+    margin: 20px 0px;
+    padding: 63px 20px;
+    text-align: center;
+    border: 4px dashed var(--purple-colour);
+}
+
+.drag-text {
+    text-align: center;
+    font-size: 7em;
+    color: var(--purple-colour);
+    transition: all 0.3s ease-in-out;
+}
+
+.file-select-btn {
+    color: var(--purple-colour);
+    border: 2px solid var(--purple-colour);
+    border-radius: 40px;
+}
+
+.file-select-btn:hover {
+    color: #FFF;
+    background: var(--purple-colour);
+}
+
+.input-group-text {
+    background-color: var(--purple-colour);
+    color: #FFF;
+    font-weight: 600;
+}
+
+.form-label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--purple-colour);
+}
+
+.form-control {
+    text-align: center;
+}
+
+.btn {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--blue-colour);
+}
+
+
+/* === SVG and Molecule Info Stuff === */
+.molecule-display {
+    width: 100%;
+}
+
+.molecule-svg-container {
+    width: 100%;
+    height: calc(100vh - 136px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    border: 2px solid black;
+}
+
+.svg-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.info-box {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    border: 2px solid black;
+    overflow-y: auto;
+}
+
+.mol-info-section {
+    padding-bottom: 1rem;
+}
+
+.mol-info-table {
+    padding: 10px 0px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#molecule-legend {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0px;
+}
+
+.rs-control .rs-range-color {
+    background-color: var(--purple-colour);
+}
+
+.rs-control .rs-path-color {
+    background-color: #AAA;
+}
+
+.rs-control .rs-handle {
+    background-color: #000;
+}
+
+.rs-bg-color {
+    background-color: var(--background-color);
+}
+
+.rs-tooltip-text {
+    font-size: 20px;
+}
+
+.rotation-buttons {
+    flex: 1 1 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* === Element List Stuff === */
+input[type=color] {
+    height: 3rem;
+}
+
+
+/* === Molecule Cards Stuff === */
+#molecule-card-container {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.molecule-card-header {
+    width: 50%;
+    min-height: 184px;
+    max-width: 184px;
+    max-height: 184px;
+}
+
+.molecule-card-img {
+    width: 100%;
+    height: 100%;
+}
+
+#modal-molecule-card-container {
+    width: 100%;
+}
+
+#filter-div {
+    width: 30%;
+}
+
+#modal-filter-div {
+    width: 30%;
+}
+
+@media(max-width:1732px) {
+    #modal-molecule-card-container .card-buttons .btn {
+        font-size: 0.8vw;
+    }
+}
+
+@media(max-width:1320px) {
+    #modal-molecule-card-container .card-buttons .btn {
+        font-size: 0.9vw;
+    }
+}
+
+@media(max-width:900px) {
+    #filter-div {
+        width: 80%;
+    }
+
+    #modal-filter-div {
+        width: 80%;
+        padding-bottom: 1rem;
+    }
+}
+
+@media(max-width:850px) {
+    .molecule-card-column {
+        padding-bottom: 1rem;
+    }
+
+    #filter-div {
+        padding-bottom: 1rem;
+    }
+
+    #modal-molecule-card-container .card-buttons .btn {
+        font-size: 1em;
+    }
+}
+
+@media(max-width:800px) {
+    .element-card-col {
+        padding-bottom: 1rem;
+    }
+}
+
+
+/* === Modal Stuff === */
+.modal-dialog {
+    min-width: 70%;
+}
+
+.modal-content .modal-title {
+    margin-left: 18px;
+}
+
+.modal-content .btn-close {
+    margin-left: -28px;
+    margin-right: 10px;
+}
+
+.modal-body {
+    padding: 20px 50px 20px 50px;
+}
+
+.add-row-wrap {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    border: 2px dashed var(--orange-colour);
+    color: var(--orange-colour);
+    position: relative;
+}
+
+.add-row-wrap:hover {
+    background-color: var(--orange-colour);
+    border: 2px dashed #FFF;
+    color: #FFF;
+}
+
+@media(max-width:991px) {
+    .ae-element-preview-container {
+        padding-top: 3rem
+    }
+}
+
+.card {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+}
+
+.clickable-card {
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    cursor: pointer;
+}
+
+.clickable-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.card-glow {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 123, 255, 0.9);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0, 123, 255, 0.9);
+    box-shadow: 0px 0px 25px 0px rgba(0, 123, 255, 0.9);
+}
+
+
+/* === Footer === */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    padding: 6px 0px;
+    background: #000;
+}
+
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    color: #000;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    background: #FFF !important;
+    color: #000;
+    text-decoration: none;
+}
+
+.custom-icon {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#overlay {
+    mix-blend-mode: overlay;
+}
