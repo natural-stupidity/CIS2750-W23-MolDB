@@ -38,23 +38,34 @@ python3 server.py
 ```
 The program will run on localhost:54947
 
-## [![Video Demo](https://msirna.github.io/static/videos/MolDB%20Demo.mp4)
+## [Video Demo](https://msirna.github.io/static/videos/MolDB%20Demo.mp4)
 
 ## Screenshots:
 
-*The front page without any molecules.*
+*The front page without any molecules:*\
 
-*The elements menu with the default elements.*
+![1](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/2a68cec4-0983-43d1-a8a2-5af340b513b1)
 
-*The settings menu.*
+*The elements menu with the default elements:*
 
-*A Caffeine molecule being shown in the editor using the new nightmare SVG mode.*
+![2](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/0fbd79e2-9443-48a1-a2a9-98b2ac944ed4)
 
-*A Caffeine molecule being shown in the editor using the original nightmare SVG mode.*
+*The settings menu:*
 
-*A Caffeine molecule being shown in the editor using the non-nightmare SVG mode.*
+![3](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/22366976-2cd7-4db2-b365-d1ab4827f313)
 
-*The front page with some example molecules.*
+*A Caffeine molecule being shown in the editor using the new nightmare SVG mode:*
 
+![4](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/d3e68704-915f-4193-aa71-68614adfe484)
 
+*A Caffeine molecule being shown in the editor using the original nightmare SVG mode:*
 
+![5](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/660c10e0-f051-4d51-893d-7dc031d3691f)
+
+*A Caffeine molecule being shown in the editor using the non-nightmare SVG mode:*
+
+![6](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/59098e15-9de9-4ba1-9d46-58e4b680d96b)
+
+*The front page with some example molecules:*
+
+![7](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/abda94b2-791b-4e6e-b7d9-c8a2b6223547)
