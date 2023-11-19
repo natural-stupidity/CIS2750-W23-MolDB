@@ -38,7 +38,9 @@ python3 server.py
 ```
 The program will run on localhost:54947
 
-## [Video Demo](https://msirna.github.io/static/videos/MolDB%20Demo.mp4)
+## Video Demo
+
+https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/5b4f4c7e-0a56-4302-afc7-df3b830e3a81
 
 ## Screenshots:
 
