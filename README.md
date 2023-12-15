@@ -44,7 +44,7 @@ https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/5b4f4c7e-0a56-4302-a
 
 ## Screenshots:
 
-*The front page without any molecules:*\
+*The front page without any molecules:*
 
 ![1](https://github.com/msirna/CIS2750-W23-MolDB/assets/91761269/2a68cec4-0983-43d1-a8a2-5af340b513b1)
 
