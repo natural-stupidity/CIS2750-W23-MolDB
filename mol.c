@@ -58,7 +58,7 @@ void compute_coords(bond *b) {
 }
 
 molecule *molmalloc(unsigned short atom_max, unsigned short bond_max) {
-    molecule *newMolecule = (molecule *)malloc(sizeof(molecule));
+    molecule *newMolecule = malloc(sizeof(molecule));
     if (!newMolecule) {
         fprintf(stderr, "molmalloc: Allocation failed.\n");
         return NULL;
